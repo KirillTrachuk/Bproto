@@ -1,0 +1,182 @@
+@import './common/vars.sass'
+@import './common/gem.scss'
+@import 'blocks/**/*'
+
+*
+    box-sizing: border-box
+
+html, body
+    width: 100%
+    background: #000
+
+body,
+main
+    overflow-x: hidden
+
+body
+    display: flex
+    flex-direction: column
+    font-family: var(--main-font)
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+
+a
+    text-decoration: none
+    outline: none
+
+img
+    max-width: 100%
+    height: auto
+
+section
+    position: relative
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    // visibility: hidden
+.container
+    position: relative
+    width: var(--container-width)
+    min-width: var(--container-width)
+    margin: 0 auto
+
+input , textarea
+    &::-webkit-input-placeholder,
+    &::placeholder
+        transition: all .3s
+    &:focus
+        &::-webkit-input-placeholder,
+        &::placeholder
+            color: transparent
+
+button[type='submit']
+    cursor: pointer
+
+//start here
+header
+    display: flex
+    position: fixed
+    flex-direction: row
+    height: gem(102)
+    align-items: center
+    width: 100%
+    z-index: 4
+    .logo
+        display: flex
+        margin: gem(0) gem(148) gem(0) gem(61)
+        a
+            display: flex
+    .menu
+        display: flex
+        a
+            display: flex
+            margin: gem(0) gem(23)
+            transition: color .3s ease
+            &:hover
+                color: #22F4FF
+    &::after
+        content: ""
+        height: 1px
+        width: 100%
+        display: flex
+        position: absolute
+        top: gem(102)
+        background-color: #fff
+        opacity: 0.3
+.glass
+    display: flex
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 5
+.create 
+    &-main
+        display: flex
+        flex-direction: row
+        &-left
+            display: flex
+            flex-direction: column
+            h1
+                width: gem(684)
+                margin-top: gem(106)
+                margin: gem(209) gem(0) gem(30) gem(0)
+            p
+                width: gem(502)
+                opacity: 0.8
+            .lightning
+                display: flex
+                position: absolute
+                top: gem(330)
+                left: gem(500)
+                width: gem(51)
+        &-right
+            display: flex
+            position: relative
+            z-index: 4
+            margin-top: gem(124)
+            z-index: 6
+            margin-left: gem(89)
+            img
+                width: gem(363)
+.button_inner
+    width: gem(214)
+    height: gem(56)
+    background: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #000 !important
+    z-index: 6
+    font-family: var(--button-font) !important
+    border-radius: 0 gem(8) gem(8) gem(8)
+    transform: translate3d(gem(5), gem(5), 0)
+    transition: all 1s ease
+    img
+        width: gem(16)
+        margin-right: gem(7)
+.post
+    display: flex
+    position: fixed
+    top: gem(15)
+    right: gem(60)
+    width: gem(214)
+    cursor: pointer
+    z-index: 7
+    color: #000
+    transition: all 1s ease
+    &::after
+        display: flex
+        position: absolute
+        content: ''
+        width: gem(212)
+        height: gem(54)
+        border-radius: 0 gem(8) gem(8) gem(8)
+        background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
+    &:hover
+        .button_inner
+            transform: translate3d(0, 0, 0)
+            background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
+    // .post
+    // display: flex
+    // z-index: 5
+    // position: fixed
+    // background: #fff
+    // padding: gem(21) gem(18)
+    // border-radius: 0 gem(8) gem(8) gem(8)
+    // top: gem(33)
+    // right: gem(15)
+    // img
+    //     margin-right: gem(7)
+    // &::after
+    //     content: ''
+    //     display: flex
+    //     z-index: 5
+    //     position: absolute
+    //     background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
+    //     width: gem(214)
+    //     height: gem(56)
+    //     border-radius: 0 gem(8) gem(8) gem(8)
+    //     top: gem(2)
+    //     right: gem(2)
+        
