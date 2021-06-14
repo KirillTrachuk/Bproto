@@ -61,7 +61,9 @@ header
     height: gem(102)
     align-items: center
     width: 100%
-    z-index: 4
+    z-index: 7
+    background: rgba(0, 0, 0, 0.6)
+    backdrop-filter: blur(42px)
     .logo
         display: flex
         margin: gem(0) gem(148) gem(0) gem(61)
@@ -78,18 +80,27 @@ header
     &::after
         content: ""
         height: 1px
-        width: 100%
+        width: gem(1011)
         display: flex
         position: absolute
         top: gem(102)
         background-color: #fff
         opacity: 0.3
-.glass
-    display: flex
-    position: absolute
-    right: 0
-    top: 0
-    z-index: 5
+    .progress
+        position: fixed
+        left: 0
+        top: gem(102)
+        width: 20%
+        height: gem(2)
+        background-color: #CCC8C5
+// .glass
+//     display: flex
+//     position: absolute
+//     right: 0
+//     top: 0
+//     z-index: 5
+
+
 .create 
     &-main
         display: flex
@@ -97,10 +108,15 @@ header
         &-left
             display: flex
             flex-direction: column
+            z-index: 1
             h1
                 width: gem(684)
                 margin-top: gem(106)
                 margin: gem(209) gem(0) gem(30) gem(0)
+                span
+                    background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
             p
                 width: gem(502)
                 opacity: 0.8
@@ -110,15 +126,68 @@ header
                 top: gem(330)
                 left: gem(500)
                 width: gem(51)
+            &-project
+                display: flex
+                background-image: url(../images/Union.svg)
+                height: gem(135)
+                background-repeat: no-repeat
+                background-size: contain
+                align-items: center
+                position: absolute
+                top: gem(653)
+                .url
+                    display: flex
+                    flex-direction: row
+                    margin-left: gem(32)
+                    align-items: center
+                    position: relative
+                    top: gem(16)
+                    a   
+                        display: flex
+                        margin-right: gem(19)
+                        transition: all .3s ease
+                        &:hover
+                            opacity: 0.7
+                    .keepsmile
+                        display: flex
+                        position: relative
+                        top: gem(-5)
+                        left: gem(-5)
+                    .articals
+                        display: flex
+                        font-size: gem(8)
+                        line-height: gem(10)
+                        opacity: 0.7
+                        font-family: var(--button-font)
+                        position: absolute
+                        top: gem(-22)
+                        left: gem(345)
         &-right
             display: flex
             position: relative
-            z-index: 4
-            margin-top: gem(124)
             z-index: 6
             margin-left: gem(89)
-            img
-                width: gem(363)
+            background-image: url(../images/glass.png)
+            width: gem(480)
+            height: gem(810)
+            right: gem(-118)
+            background-repeat: no-repeat
+            background-size: cover
+            video
+                display: block
+                width: gem(700)
+                height: gem(800)
+                mix-blend-mode: screen
+                position: relative
+                right: gem(250)
+                top: 0
+                filter: saturate(1.4)
+    .bg-light
+        display: flex
+        position: absolute
+        top: gem(-102)
+        left: gem(-282)
+
 .button_inner
     width: gem(214)
     height: gem(56)
@@ -157,26 +226,18 @@ header
         .button_inner
             transform: translate3d(0, 0, 0)
             background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
-    // .post
-    // display: flex
-    // z-index: 5
-    // position: fixed
-    // background: #fff
-    // padding: gem(21) gem(18)
-    // border-radius: 0 gem(8) gem(8) gem(8)
-    // top: gem(33)
-    // right: gem(15)
-    // img
-    //     margin-right: gem(7)
-    // &::after
-    //     content: ''
-    //     display: flex
-    //     z-index: 5
-    //     position: absolute
-    //     background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
-    //     width: gem(214)
-    //     height: gem(56)
-    //     border-radius: 0 gem(8) gem(8) gem(8)
-    //     top: gem(2)
-    //     right: gem(2)
-        
+
+.building
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: gem(220)
+        h2 
+            span
+                background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        p 
+            width: gem(419)
+            text-align: center
