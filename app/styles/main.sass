@@ -92,14 +92,7 @@ header
         top: gem(102)
         width: 20%
         height: gem(2)
-        background-color: #CCC8C5
-// .glass
-//     display: flex
-//     position: absolute
-//     right: 0
-//     top: 0
-//     z-index: 5
-
+        background: linear-gradient(97.56deg, #4739FF 0%, #22F4FF 50.52%, #7B46FF 100%);
 
 .create 
     &-main
@@ -120,12 +113,52 @@ header
             p
                 width: gem(502)
                 opacity: 0.8
+                margin-bottom: gem(54)
             .lightning
                 display: flex
                 position: absolute
                 top: gem(330)
                 left: gem(500)
                 width: gem(51)
+            form
+                .custom_input
+                    display: flex
+                    transition: opacity 1s ease
+                    width: gem(311)
+                    &:hover
+                        .input_def
+                            opacity: 0
+                        .input_active
+                            opacity: 1
+                    input
+                        display: flex
+                        position: relative
+                        top: 0
+                        width: gem(311)
+                        height: gem(56)
+                        background: none
+                        border: none
+                        outline: none
+                        z-index: 2
+                        color: #fff
+                        font-family: var(--accent-font)
+                        font-size: gem(12)
+                        line-height: gem(14)
+                        padding-left: gem(24)
+                    .input_def
+                        display: flex
+                        position: absolute
+                        opacity: 1
+                        transition: opacity 1s ease
+                    .input_active
+                        display: flex
+                        position: absolute
+                        opacity: 0
+                        transition: opacity 1s ease
+                button
+                    display: flex
+                    position: relative
+                    top: 0
             &-project
                 display: flex
                 background-image: url(../images/Union.svg)
@@ -222,8 +255,10 @@ header
         height: gem(54)
         border-radius: 0 gem(8) gem(8) gem(8)
         background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
+        // transition: all 1s ease
     &:hover
         .button_inner
+            transition: all 1s ease
             transform: translate3d(0, 0, 0)
             background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
 
@@ -234,6 +269,7 @@ header
         align-items: center
         margin-top: gem(220)
         h2 
+            margin-bottom: gem(22)
             span
                 background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
                 -webkit-background-clip: text
@@ -241,3 +277,45 @@ header
         p 
             width: gem(419)
             text-align: center
+            opacity: .8
+            margin-bottom: gem(150)
+    &-main
+        display: flex
+        flex-direction: row
+        &-left
+            width: gem(500)
+        &-right
+            &-highlights
+                h3
+                    margin-bottom: gem(16)
+                p
+                    width: gem(502)
+                    margin-bottom: gem(37)
+                a   
+                    margin-bottom: gem(73)
+                    display: flex
+                    flex-direction: row
+                    img
+                        width: gem(32)
+                        display: flex
+                        position: relative
+                        top: gem(-10)
+                        right: gem(-10)
+                    h4
+                        font-family: var(--button-font)
+
+.team
+    &-card
+        width: gem(286)
+        height: gem(286)
+        border: 1px solid #fff
+        // border-image: linear-gradient(to left top,#ffffff00 5.22%,  #FFFFFF 30%, transparent 70%, #adf2f7 90%)
+        // border-image-slice: 2
+        border-radius: gem(40)
+
+
+// border-image-source: linear-gradient(272.07deg, #ffffff00 5.22%, #FFFFFF 20.97%, #ffffff00 35.77%),
+// linear-gradient(110.3deg, #ffffff -2.07%, #ffffff00 25.17%)
+
+
+        
