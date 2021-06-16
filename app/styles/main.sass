@@ -121,6 +121,9 @@ header
                 left: gem(500)
                 width: gem(51)
             form
+                display: flex
+                position: relative
+                flex-direction: row
                 .custom_input
                     display: flex
                     transition: opacity 1s ease
@@ -158,7 +161,10 @@ header
                 button
                     display: flex
                     position: relative
-                    top: 0
+                    top: gem(-10)
+                    background-color: transparent
+                    border-color: transparent
+                    left: gem(10)
             &-project
                 display: flex
                 background-image: url(../images/Union.svg)
@@ -166,8 +172,7 @@ header
                 background-repeat: no-repeat
                 background-size: contain
                 align-items: center
-                position: absolute
-                top: gem(653)
+                position: relative
                 .url
                     display: flex
                     flex-direction: row
@@ -179,6 +184,14 @@ header
                         display: flex
                         margin-right: gem(19)
                         transition: all .3s ease
+                        img
+                            width: gem(131)
+                        &:nth-child(2)
+                            img
+                                width: gem(87)
+                        &:nth-child(3)
+                            
+                                
                         &:hover
                             opacity: 0.7
                     .keepsmile
@@ -186,15 +199,16 @@ header
                         position: relative
                         top: gem(-5)
                         left: gem(-5)
+                        width: gem(100)
                     .articals
                         display: flex
                         font-size: gem(8)
                         line-height: gem(10)
                         opacity: 0.7
                         font-family: var(--button-font)
-                        position: absolute
-                        top: gem(-22)
-                        left: gem(345)
+                        position: relative
+                        top: gem(-36)
+                        left: gem(-110)
         &-right
             display: flex
             position: relative
@@ -388,6 +402,8 @@ header
             background: rgba(255, 255, 255, 0.03)
             box-shadow: inset 0px 0.798571px 25px rgba(227, 222, 255, 0.1)
             backdrop-filter: blur(15px)
+            align-items: center
+            justify-content: center
             &:nth-child(1)
                 border-radius: 40px 0 0 0 
             &:nth-child(5)
@@ -396,6 +412,8 @@ header
                 border-radius: 0 0 0 40px
             &:nth-child(10)
                 border-radius: 0 0 40px 0
+            img
+                width: gem(120)
         &-line_x
             display: flex
             position: relative
@@ -410,9 +428,74 @@ header
                 left: gem(70)
             &:nth-child(14)
                 left: gem(60)
+        &-line_y
+            display: flex
+            position: absolute
+            top: gem(450)
+            left: gem(360)
+            width: 1px
+            height: gem(239)
+            background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 52.51%, rgba(255, 255, 255, 0) 102.88%)
+            &:nth-child(16)
+                left: gem(600)
+            &:nth-child(17)
+                left: gem(840)
+            &:nth-child(18)
+                left: gem(1080)
                 
-                
-                
+.about  
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        h2
+            margin-bottom: gem(22)
+            width: gem(846)
+            text-align: center
+            span
+                background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        p
+            width: gem(519)
+            text-align: center
+        &-project
+            display: flex
+            background-image: url(../images/Union.svg)
+            height: gem(135)
+            background-repeat: no-repeat
+            background-size: contain
+            align-items: center
+            position: absolute
+            top: gem(200)
+            .url
+                display: flex
+                flex-direction: row
+                margin-left: gem(32)
+                align-items: center
+                position: relative
+                top: gem(16)
+                a   
+                    display: flex
+                    margin-right: gem(19)
+                    transition: all .3s ease
+                    &:hover
+                        opacity: 0.7
+                .keepsmile
+                    display: flex
+                    position: relative
+                    top: gem(-5)
+                    left: gem(-5)
+                .articals
+                    display: flex
+                    font-size: gem(8)
+                    line-height: gem(10)
+                    opacity: 0.7
+                    font-family: var(--button-font)
+                    position: absolute
+                    top: gem(-22)
+                    left: gem(310)
+
 
                 
 
