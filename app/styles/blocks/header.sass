@@ -1,0 +1,52 @@
+header
+    display: flex
+    position: fixed
+    flex-direction: row
+    height: gem(102)
+    align-items: center
+    width: 100%
+    z-index: 7
+    background: rgba(0, 0, 0, 0.6)
+    backdrop-filter: blur(42px)
+    .logo
+        display: flex
+        margin: gem(0) gem(148) gem(0) gem(61)
+        img
+            width: gem(133)
+        a
+            display: flex
+    .menu
+        display: flex
+        a
+            display: flex
+            margin: gem(0) gem(23)
+            transition: color .3s ease
+            &:hover
+                color: #22F4FF
+    &::after
+        content: ""
+        height: 1px
+        width: gem(1051)
+        display: flex
+        position: absolute
+        top: gem(102)
+        background-color: #fff
+        opacity: 0.3
+    .progress
+        position: fixed
+        left: 0
+        top: gem(102)
+        width: 0%
+        height: gem(2)
+        background: linear-gradient(97.56deg, #4739FF 0%, #22F4FF 50.52%, #7B46FF 100%)
+@media only screen and (max-width : 1024px)
+    header
+        height: gem(82)
+        .menu
+            display: none
+        &::after
+            top: gem(82)
+        .progress
+            top: gem(82)
+
+        

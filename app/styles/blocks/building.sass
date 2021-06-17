@@ -1,0 +1,66 @@
+.building
+    .container
+        z-index: 1
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: gem(220)
+        h2 
+            margin-bottom: gem(22)
+            span
+                background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        p 
+            width: gem(419)
+            text-align: center
+            opacity: .8
+            margin-bottom: gem(150)
+    &-main
+        display: flex
+        flex-direction: row
+        &-left
+            width: gem(500)
+            img
+                width: gem(400)
+        &-right
+            &-content
+                overflow: scroll
+                height: gem(500)
+                width: gem(502)
+                &::-webkit-scrollbar 
+                    width: 0
+                &-highlights
+                    h3
+                        margin-bottom: gem(16)
+                    p
+                        width: gem(502)
+                        margin-bottom: gem(37)
+                    a   
+                        margin-bottom: gem(73)
+                        display: flex
+                        flex-direction: row
+                        img
+                            width: gem(32)
+                            display: flex
+                            position: relative
+                            top: gem(-10)
+                            right: gem(-10)
+                        h4
+                            font-family: var(--button-font)
+            .counter
+                display: flex
+                position: absolute
+                top: 2.5rem
+                right: 0
+                img
+                    width: gem(103)
+    .highlights_bg
+        display: flex
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 0
+        img
+            width: gem(1100)

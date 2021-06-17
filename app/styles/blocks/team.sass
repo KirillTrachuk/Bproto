@@ -1,0 +1,67 @@
+.team
+    background-color: #000
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        h2
+            margin-bottom: gem(22)
+            margin-top: gem(110)
+            span
+                background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        p
+            width: gem(690)
+            margin-bottom: gem(110)
+    &-card
+        display: flex
+        flex-direction: row
+        margin-bottom: gem(110)
+        &-value
+            display: flex
+            width: gem(286)
+            height: gem(286)
+            background-image: url(../images/card.svg) 
+            background-repeat: no-repeat
+            background-size: contain
+            flex-direction: column
+            padding: gem(32)
+            margin-right: gem(16)
+            img
+                width: gem(100)
+                margin-bottom: gem(16)
+            h3
+                font-family: var(--button-font)
+                line-height: gem(18)
+                margin-bottom: gem(10)
+            h4 
+                background: linear-gradient(90.72deg, #7B46FF 3.94%, #23F3FF 49.57%, #444CFF 98.15%), linear-gradient(0deg, #FFFFFF, #FFFFFF)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                font-size: gem(12)
+                line-height: gem(16)
+                margin-bottom: gem(18)
+            &:nth-child(2)
+                background-image: url(../images/lukas_bg.svg) 
+            &:nth-child(3)
+                background-image: url(../images/sergio_bg.svg) 
+            .social_icon 
+                display: flex
+                flex-direction: row
+                a
+                    border-radius: gem(60)
+                    border: 1px solid #fff
+                    width: gem(32)
+                    height: gem(32)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin-right: gem(12)
+    .head_light
+        display: flex
+        position: absolute
+        top: gem(150)
+        right: 0
+        img
+            width: gem(446)

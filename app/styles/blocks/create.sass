@@ -1,0 +1,211 @@
+.create 
+    &-main
+        display: flex
+        flex-direction: row
+        &-left
+            display: flex
+            flex-direction: column
+            z-index: 1
+            h1
+                width: gem(684)
+                margin-top: gem(106)
+                margin: gem(209) gem(0) gem(30) gem(0)
+                span
+                    background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+            p
+                width: gem(502)
+                opacity: 0.8
+                margin-bottom: gem(54)
+            .lightning
+                display: flex
+                position: absolute
+                top: gem(330)
+                left: gem(500)
+                width: gem(51)
+            form
+                display: flex
+                position: relative
+                flex-direction: row
+                .custom_input
+                    display: flex
+                    &-send
+                        display: flex
+                        input
+                            display: flex
+                            width: gem(311)
+                            height: gem(56)
+                            margin-right: gem(16)
+                            background: none
+                            border: none
+                            outline: none
+                            z-index: 2
+                            color: #fff
+                            font-family: var(--accent-font)
+                            font-size: gem(12)
+                            line-height: gem(14)
+                            padding-left: gem(24)
+                            transition: opacity .3s ease
+                            &:focus
+                                ~ span
+                                    opacity: 0
+                        span
+                            display: flex
+                            position: absolute
+                            top: gem(21)
+                            left: gem(25)
+                        .input_def
+                            display: flex
+                            position: absolute
+                            width: gem(311)
+                            opacity: 1
+                            transition: opacity .5s ease
+                        .input_active
+                            display: flex
+                            position: absolute
+                            width: gem(311)
+                            opacity: 0
+                            transition: opacity .5s ease
+                        &:hover
+                            .input_def
+                                opacity: 0
+                            .input_active
+                                opacity: 1
+                    button
+                        display: flex
+                        width: gem(214)
+                        background-color: transparent
+                        border-color: transparent
+                    .form_but
+                        cursor: pointer
+                        z-index: 7
+                        color: #000
+                        transition: all .4s ease
+                        width: gem(214)
+                        &:hover
+                            .button_inner
+                                color: #fff !important
+                                transition: all .4s ease
+                                transform: translate3d(0, 0, 0)
+                                background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
+                        &::after
+                            display: flex
+                            position: absolute
+                            content: ''
+                            width: gem(212)
+                            height: gem(54)
+                            border-radius: 0 gem(8) gem(8) gem(8)
+                            background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
+                        .button_inner
+                            display: flex
+                            position: absolute
+            &-project
+                display: flex
+                background-image: url(../images/Union.svg)
+                height: gem(135)
+                background-repeat: no-repeat
+                background-size: contain
+                align-items: center
+                position: relative
+                width: gem(547)
+                flex-direction: row
+                margin-top: gem(144)
+                .url
+                    display: flex
+                    flex-direction: row
+                    margin-left: gem(32)
+                    align-items: center
+                    position: absolute
+                    top: gem(16)
+                    width: gem(547)
+                    a
+                        margin-right: gem(19)
+                        transition: all .3s ease
+                        img
+                            width: gem(131)
+                        &:nth-child(2)
+                            // width: gem(87) 
+                            img
+                                width: gem(87)
+                        &:hover
+                            opacity: 0.7
+                    .articals
+                        position: absolute
+                        font-size: gem(8)
+                        line-height: gem(10)
+                        opacity: 0.7
+                        font-family: var(--button-font)
+                        top: 0
+                        left: gem(350)
+                    .keepsmile
+                        width: gem(75)
+        &-right
+            display: flex
+            position: relative
+            z-index: 6
+            margin-left: gem(89)
+            background-image: url(../images/glass.png)
+            width: gem(480)
+            height: gem(810)
+            right: gem(-158)
+            background-repeat: no-repeat
+            background-size: cover
+            video
+                display: block
+                width: gem(700)
+                height: gem(800)
+                mix-blend-mode: screen
+                position: relative
+                right: gem(250)
+                top: 0
+                filter: saturate(1.4)
+    .bg-light
+        display: flex
+        position: absolute
+        top: gem(-102)
+        left: gem(-282)
+        img
+            width: gem(1050)
+
+@media only screen and (max-width : 1024px)
+    .create 
+        &-main
+            display: flex
+            flex-direction: column-reverse
+            &-right
+                right: gem(-200)
+            &-left
+                position: relative
+                top: gem(-60)
+                z-index: 7
+                h1
+                    margin-top: gem(0)
+                    margin: gem(0) gem(0) gem(30) gem(0)
+                .lightning
+                    top: gem(130)
+                form
+                    .custom_input
+                        &-send
+                            input
+                                width: gem(468)
+                            .input_768
+                                display: flex
+                                position: absolute
+                            .input_def
+                                display: none
+                            .input_active
+                                display: none
+                &-project
+                    width: gem(704)
+                    height: gem(173)
+                    .url
+                        a
+                            img 
+                                width: gem(169)
+                            &:nth-child(2)
+                                width: gem(112)
+
+                            
+                            
+

@@ -1,0 +1,71 @@
+.partners
+    .container
+        h2
+            margin-bottom: gem(26)
+            margin-top: gem(110)
+            span
+                background: linear-gradient(93.92deg, #4739FF 0%, #22F4FF 48.96%, #7B46FF 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        p
+            width: gem(568)
+            margin-bottom: gem(110)
+    &-contant
+        display: flex
+        flex-wrap: wrap
+        margin-left: gem(120)
+        margin-bottom: gem(110)
+        &-item  
+            display: flex
+            width: gem(240)
+            height: gem(180)
+            background: rgba(255, 255, 255, 0.03)
+            box-shadow: inset 0px 0.798571px 25px rgba(227, 222, 255, 0.1)
+            backdrop-filter: blur(15px)
+            align-items: center
+            justify-content: center
+            &:nth-child(1)
+                border-radius: 40px 0 0 0 
+            &:nth-child(5)
+                border-radius: 0 40px 0 0
+            &:nth-child(6)
+                border-radius: 0 0 0 40px
+            &:nth-child(10)
+                border-radius: 0 0 40px 0
+            img
+                width: gem(120)
+        &-line_x
+            display: flex
+            position: relative
+            top: gem(-180)
+            left: gem(109)
+            width: gem(260)
+            height: 1px
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 52.51%, rgba(255, 255, 255, 0) 102.88%)
+            &:nth-child(12)
+                left: gem(85)
+            &:nth-child(13)
+                left: gem(70)
+            &:nth-child(14)
+                left: gem(60)
+        &-line_y
+            display: flex
+            position: absolute
+            top: gem(450)
+            left: gem(360)
+            width: 1px
+            height: gem(239)
+            background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 52.51%, rgba(255, 255, 255, 0) 102.88%)
+            &:nth-child(16)
+                left: gem(600)
+            &:nth-child(17)
+                left: gem(840)
+            &:nth-child(18)
+                left: gem(1080)
+    &-bg
+        display: flex
+        position: absolute
+        top: gem(-150)
+        right: 0
+        img
+            width: gem(766)
