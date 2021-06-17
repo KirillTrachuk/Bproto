@@ -124,6 +124,7 @@ header
                 display: flex
                 position: relative
                 flex-direction: row
+                width: gem(547)
                 .custom_input
                     display: flex
                     transition: opacity 1s ease
@@ -164,7 +165,7 @@ header
                     top: gem(-10)
                     background-color: transparent
                     border-color: transparent
-                    left: gem(10)
+                    left: gem(330)
             &-project
                 display: flex
                 background-image: url(../images/Union.svg)
@@ -173,42 +174,38 @@ header
                 background-size: contain
                 align-items: center
                 position: relative
+                width: gem(547)
+                flex-direction: row
+                margin-top: gem(144)
                 .url
                     display: flex
                     flex-direction: row
                     margin-left: gem(32)
                     align-items: center
-                    position: relative
+                    position: absolute
                     top: gem(16)
-                    a   
-                        display: flex
+                    width: gem(547)
+                    a
                         margin-right: gem(19)
                         transition: all .3s ease
                         img
                             width: gem(131)
                         &:nth-child(2)
+                            // width: gem(87) 
                             img
                                 width: gem(87)
-                        &:nth-child(3)
-                            
-                                
                         &:hover
                             opacity: 0.7
-                    .keepsmile
-                        display: flex
-                        position: relative
-                        top: gem(-5)
-                        left: gem(-5)
-                        width: gem(100)
                     .articals
-                        display: flex
+                        position: absolute
                         font-size: gem(8)
                         line-height: gem(10)
                         opacity: 0.7
                         font-family: var(--button-font)
-                        position: relative
-                        top: gem(-36)
-                        left: gem(-110)
+                        top: 0
+                        left: gem(350)
+                    .keepsmile
+                        width: gem(75)
         &-right
             display: flex
             position: relative
