@@ -61,14 +61,16 @@
     .head_light
         display: flex
         position: absolute
-        top: gem(150)
-        right: 0
+        top: gem(200)
+        right: gem(-150)
         img
-            width: gem(446)
+            width: gem(546)
         .head_light_on
             display: flex
             position: absolute
             animation: head 4s linear infinite
+    .bg_head
+        display: none
 
 @keyframes head
     0%
@@ -83,3 +85,26 @@
         opacity: 0
     100%
         opacity: 0
+
+@media only screen and (max-width : 1024px)
+    .team
+        display: flex
+        position: relative
+        top: gem(350)
+        &-content
+            align-items: flex-start
+            position: relative
+            top: gem(-100)
+            z-index: 3
+            p
+                margin-bottom: gem(0)
+        &-card
+            width: gem(890)
+        .head_light
+            top: gem(-450)
+            right: gem(-50)
+        .bg_head
+            display: flex
+            position: absolute
+            z-index: 2
+            top: gem(-450)

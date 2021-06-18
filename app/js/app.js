@@ -20,4 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	progress.style.width = per + '%'
 	}
 
+	gsap.to(".preloader", 2.2, {
+        delay: 5,
+        top: "-3000px",
+        ease: Expo.easeInOut
+    })
+
+
 })

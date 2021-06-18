@@ -24,6 +24,8 @@
             backdrop-filter: blur(15px)
             align-items: center
             justify-content: center
+            cursor: pointer
+            z-index: 1
             &:nth-child(1)
                 border-radius: 40px 0 0 0 
             &:nth-child(5)
@@ -32,8 +34,25 @@
                 border-radius: 0 0 0 40px
             &:nth-child(10)
                 border-radius: 0 0 40px 0
-            img
-                width: gem(120)
+            .bw
+                display: flex
+                position: absolute
+                opacity: 1
+                transition: opacity .3s ease
+                img
+                    width: gem(120)
+            .color
+                display: flex
+                position: absolute
+                opacity: 0
+                transition: opacity .3s ease
+                img
+                    width: gem(120)
+            &:hover
+                .bw
+                    opacity: 0
+                .color
+                    opacity: 1
         &-line_x
             display: flex
             position: relative
@@ -42,6 +61,7 @@
             width: gem(260)
             height: 1px
             background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 52.51%, rgba(255, 255, 255, 0) 102.88%)
+            z-index: 1
             &:nth-child(12)
                 left: gem(85)
             &:nth-child(13)
@@ -56,6 +76,7 @@
             width: 1px
             height: gem(239)
             background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 52.51%, rgba(255, 255, 255, 0) 102.88%)
+            z-index: 1
             &:nth-child(16)
                 left: gem(600)
             &:nth-child(17)
@@ -67,5 +88,22 @@
         position: absolute
         top: gem(-150)
         right: 0
+        z-index: 0
         img
             width: gem(766)
+        .partner_bg_table
+            display: none
+@media only screen and (max-width : 1024px)
+    .partners
+        top: gem(300)
+        &-contant
+            width: gem(1200)
+        &-bg
+            top: gem(50)
+            img
+                width: gem(500)
+            .partner_bg_desc
+                display: none
+            .partner_bg_table
+                display: flex
+            

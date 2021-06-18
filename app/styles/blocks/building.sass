@@ -62,8 +62,10 @@
                 position: absolute
                 top: 2.5rem
                 right: 0
-                img
+                .counter_desctop
                     width: gem(103)
+                .counter_tablet
+                    display: none
     .highlights_bg
         display: flex
         position: absolute
@@ -77,20 +79,31 @@
         .container
         &-content
             align-items: flex-start
+            margin-top: gem(520)
             h2
+                z-index: 1
             p 
                 text-align: left
+                z-index: 1
+                margin-bottom: gem(50)
         &-main
             flex-direction: column
             &-right
                 &-content
                     display: flex
                 .counter
-                    display: none
+                    display: flex
+                    .counter_desctop
+                        display: none
+                    .counter_tablet
+                        display: flex
+                        position: relative
+                        top: gem(200)
             &-left
                 display: flex
                 position: relative
-                top: gem(-500)
-                left: gem(150)
+                top: gem(-904)
+                left: gem(175)
         .highlights_bg
+            top: gem(-430)
            
