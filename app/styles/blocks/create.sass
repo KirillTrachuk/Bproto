@@ -163,13 +163,14 @@
                 right: gem(250)
                 top: 0
                 filter: saturate(1.4)
-    .bg-light
-        display: flex
-        position: absolute
-        top: gem(-102)
-        left: gem(-282)
-        img
-            width: gem(1050)
+.bg-light
+    display: flex
+    position: absolute
+    top: gem(2)
+    left: gem(-282)
+    z-index: 2
+    img
+        width: gem(1050)
 
 @media only screen and (max-width : 1024px)
     .create 
@@ -199,6 +200,9 @@
                                 display: none
                             .input_active
                                 display: none
+                        .form_but
+                            position: relative
+                            top: gem(-5)
                 &-project
                     width: gem(704)
                     height: gem(173)
@@ -209,6 +213,8 @@
                                 width: gem(169)
                             &:nth-child(2)
                                 width: gem(112)
+                            &:nth-child(3)
+                                width: gem(170)
                         .articals
                             left: gem(490)
                             top: gem(-20)

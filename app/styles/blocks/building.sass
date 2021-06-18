@@ -22,9 +22,16 @@
         flex-direction: row
         &-left
             width: gem(500)
-            img
-                width: gem(400)
+            z-index: 0
+            video
+                display: flex
+                position: absolute
+                width: gem(1100)
+                left: gem(-400)
+                z-index: 0
+                top: gem(140)
         &-right
+            z-index: 1
             &-content
                 overflow: scroll
                 height: gem(500)
@@ -61,6 +68,28 @@
         position: absolute
         top: 0
         right: 0
-        z-index: 0
+        z-index: 2
         img
             width: gem(1100)
+@media only screen and (max-width : 1024px)
+    .building
+        .container
+        &-content
+            align-items: flex-start
+            h2
+            p 
+                text-align: left
+        &-main
+            flex-direction: column
+            &-right
+                &-content
+                    display: flex
+                .counter
+                    display: none
+            &-left
+                display: flex
+                position: relative
+                top: gem(-500)
+                left: gem(150)
+        .highlights_bg
+           
