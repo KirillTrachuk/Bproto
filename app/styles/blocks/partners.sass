@@ -98,6 +98,17 @@
         top: gem(300)
         &-contant
             width: gem(1200)
+            margin-left: gem(32)
+            // overflow-y: auto
+            overflow-x: hidden
+            // transform: rotate(-90deg) translateY(-80px)
+            // transform-origin: right top
+            &-line_y
+                left: gem(271)
+                &:nth-child(16)
+                    left: gem(511)
+                &:nth-child(17)
+                    left: gem(751)
         &-bg
             top: gem(50)
             img
@@ -106,4 +117,13 @@
                 display: none
             .partner_bg_table
                 display: flex
+@media only screen and (max-width : 480px)
+    .partners
+        top: gem(100)
+        .container
+            z-index: 5
+            p
+                width: gem(340)
+                margin-bottom: gem(50)
+
             

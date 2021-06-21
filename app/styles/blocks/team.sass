@@ -1,5 +1,6 @@
 .team
     background-color: #000
+    margin-top: gem(200)
     &-content
         display: flex
         flex-direction: column
@@ -28,6 +29,12 @@
             flex-direction: column
             padding: gem(32)
             margin-right: gem(16)
+            z-index: 5
+            &:hover
+                .img_hover
+                    opacity: 1
+                .sergio_hover
+                    opacity: 1
             img
                 width: gem(100)
                 margin-bottom: gem(16)
@@ -58,6 +65,28 @@
                     align-items: center
                     justify-content: center
                     margin-right: gem(12)
+                    transition: background .3s ease
+                    &:hover
+                        background: #22F4FF
+                        svg
+                            path
+                                fill: #7B46FF
+            .img_hover
+                display: flex
+                position: relative
+                top: gem(-240)
+                left: gem(150)  
+                width: gem(100)
+                opacity: 0
+                transition: opacity .3s ease
+            .sergio_hover
+                display: flex
+                position: relative
+                top: gem(-220)
+                left: gem(165) 
+                width: gem(62)
+                opacity: 0
+                transition: opacity .3s ease
     .head_light
         display: flex
         position: absolute
@@ -91,6 +120,7 @@
         display: flex
         position: relative
         top: gem(350)
+        margin-top: gem(300)
         &-content
             align-items: flex-start
             position: relative
@@ -99,7 +129,7 @@
             p
                 margin-bottom: gem(0)
         &-card
-            width: gem(890)
+            width: gem(740)
         .head_light
             top: gem(-450)
             right: gem(-50)
@@ -108,3 +138,25 @@
             position: absolute
             z-index: 2
             top: gem(-450)
+@media only screen and (max-width : 480px)
+    .team
+        margin-top: gem(690)
+        &-content
+            top: gem(-200)
+            p 
+                width: gem(340)
+        &-card
+            position: relative
+            top: gem(-140)
+            flex-direction: column
+            width: gem(300)
+            margin-left: gem(30)
+            &-value
+                margin-bottom: gem(20)
+            // width: gem(1200)
+        .bg_head
+            top: gem(-350)
+        .head_light
+            right: gem(-100)
+            top: gem(-480)
+

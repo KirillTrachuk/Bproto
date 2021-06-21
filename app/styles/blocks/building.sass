@@ -33,10 +33,14 @@
                 top: gem(140)
         &-right
             z-index: 5
+            overflow: scroll
+            &::-webkit-scrollbar 
+                width: 0
             &-content
-                overflow: scroll
-                height: gem(500)
                 width: gem(502)
+                height: gem(200)
+                // .slick-list
+                //     height: gem(300) !important
                 &::-webkit-scrollbar 
                     width: 0
                 &-highlights
@@ -71,7 +75,7 @@
         position: absolute
         top: gem(-230)
         right: gem(-120)
-        z-index: 4
+        // z-index: 4
         img
             width: gem(1100)
 @media only screen and (max-width : 1024px)
@@ -106,4 +110,35 @@
                 left: gem(175)
         .highlights_bg
             top: gem(-430)
-           
+@media only screen and (max-width : 480px)
+    .building
+        &-content
+            position: relative
+            top: gem(-300)
+            p
+                width: gem(366)
+        &-main
+            &-left
+                video
+                    width: gem(700)
+                    left: gem(-354)
+                    top: gem(107)
+            &-right
+                position: absolute
+                top: gem(-110)
+                overflow: hidden
+                .counter
+                    display: none
+                    .counter_tablet
+                        display: none
+                &-content
+                    width: gem(360)
+                    height: inherit
+                    flex-direction: column
+                    &-highlights
+                        p
+                            width: gem(366)
+                            margin-bottom: gem(25)
+                        a   
+                            margin-bottom: gem(50)
+

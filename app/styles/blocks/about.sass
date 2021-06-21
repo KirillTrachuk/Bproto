@@ -61,6 +61,9 @@
                         width: gem(311)
                         opacity: 0
                         transition: opacity .5s ease
+                    .input_768
+                        display: none
+                        position: absolute
                     &:hover
                         .input_def
                             opacity: 0
@@ -140,6 +143,7 @@
         position: absolute
         top: gem(150)
         left: 0
+        // animation: top_bot 6s infinite
         img
             width: gem(440)
     .about_hand_right
@@ -147,5 +151,157 @@
         position: absolute
         top: gem(500)
         right: 0
+        // animation: bot_top 6s infinite
         img
             width: gem(413)
+@keyframes top_bot
+    0%
+        top: gem(150)
+    50%
+        top: gem(200)
+    100%
+         top: gem(150)
+@keyframes bot_top
+    0%
+        top: gem(500)
+    50%
+        top: gem(450)
+    100%
+         top: gem(500)
+@media only screen and (max-width : 1024px)
+    .about  
+        margin-top: gem(200)
+        &-content
+            margin-top: gem(350)
+            align-items: flex-start
+            h2 
+                width: gem(684)
+                text-align: left
+            p
+                text-align: left
+                margin-bottom: gem(46)
+            form
+                .custom_input
+                    &-send
+                        input
+                            width: gem(468)
+                        .input_768
+                            display: flex
+                            position: absolute
+                        .input_def
+                            display: none
+                        .input_active
+                            display: none
+            &-project
+                width: gem(704)
+                height: gem(173)
+                margin-top: gem(85)
+                .url
+                    margin-top: gem(30)
+                    a
+                        img 
+                            width: gem(169)
+                        &:nth-child(2)
+                            width: gem(112)
+                        &:nth-child(3)
+                            width: gem(170)
+                    .articals
+                        left: gem(490)
+                        top: gem(-20)
+                    .keepsmile
+                        display: flex
+                        position: relative
+                        left: gem(44)
+        .about_hand_left
+            top: gem(-50)
+            left: gem(-55)
+            // animation: top_bot_tablet 6s infinite
+        .about_hand_right
+            top: gem(150)
+            right: gem(-60)
+            // animation: bot_top_tablet 6s infinite
+@keyframes top_bot_tablet
+    0%
+        top: gem(-50)
+    50%
+        top: gem(0)
+    100%
+         top: gem(-50)
+@keyframes bot_top_tablet
+    0%
+        top: gem(150)
+    50%
+        top: gem(100)
+    100%
+         top: gem(150)
+
+@media only screen and (max-width : 480px)
+    .about  
+        &-content
+            margin-top: gem(100)
+            h2
+                width: gem(339)
+            p
+                width: gem(367)
+            form
+                .custom_input
+                    flex-direction: column
+                    &-send
+                        input
+                            width: gem(365)
+                        .input_768
+                            display: none
+                        .input_def
+                            display: flex
+                            width: gem(365)
+                        .input_active
+                            display: flex
+                            width: gem(365)
+                    .form_but
+                        width: gem(400)
+                        left: gem(-5)
+                        top: gem(20)
+                        position: relative
+                        &::after
+                            width: gem(350)
+                        .button_inner
+                            width: gem(350)
+                            position: relative
+            &-project
+                background-image: url(../images/union_mobile.svg)
+                width: gem(366)
+                .url
+                    flex-direction: column
+                    align-items: flex-start
+                    width: gem(366)
+                    top: gem(30)
+                    margin-left: gem(23)
+                    a 
+                        display: flex
+                        margin-bottom: gem(15)
+                        img
+                            width: gem(100)
+                    .articals
+                        left: 0
+                        top: gem(-40)
+                    .keepsmile
+                        display: flex
+                        position: relative
+                        left: gem(160)
+                        top: gem(-130)
+                        width: gem(130)
+
+        .about_hand_left
+            top: gem(-50)
+            img 
+                width: gem(220)
+        .about_hand_right
+            top: gem(50)
+            right: gem(-20)
+            img
+                width: gem(240)
+
+            
+
+        
+        

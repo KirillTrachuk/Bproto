@@ -1,6 +1,7 @@
 @import './common/vars.sass'
 @import './common/gem.scss'
 @import 'blocks/**/*'
+@import 'blocks/slick.css'
 
 *
     box-sizing: border-box
@@ -11,7 +12,7 @@ html, body
 
 body,
 main
-    overflow-x: hidden
+    overflow-x: hidden !important
 
 body
     display: flex
@@ -75,6 +76,10 @@ button[type='submit']
         // mix-blend-mode: lighten
         // mix-blend-mode: multiply
              
+.swiper-container 
+    width: 600px
+    height: 300px
+    z-index: 5
 
 // .black_gradient
 //     display: flex

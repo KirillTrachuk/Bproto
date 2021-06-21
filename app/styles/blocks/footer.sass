@@ -4,9 +4,28 @@ footer
         position: relative
         flex-direction: row
         justify-content: space-between
+        align-items: center
         &-logo
             img
                 width: gem(133)
         &-hash
             img
                 width: gem(182)
+        &-icon
+            display: flex
+            flex-direction: row
+            a
+                border-radius: gem(60)
+                border: 1px solid #fff
+                width: gem(32)
+                height: gem(32)
+                display: flex
+                align-items: center
+                justify-content: center
+                margin-right: gem(12)
+                transition: background .3s ease
+                &:hover
+                    background: #22F4FF
+                    svg
+                        path
+                            fill: #7B46FF
