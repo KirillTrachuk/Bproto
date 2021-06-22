@@ -112,7 +112,8 @@
             right: gem(-30)
             flex-direction: column
             align-items: center
-            height: 100%
+            height: gem(448)
+            width: gem(104)
             .counter_desctop
                 width: gem(103)
                 position: absolute
@@ -122,21 +123,38 @@
                 display: none
             .current, .total
                 z-index: 9
+                display: flex
+                position: relative
+                top: gem(30)
             .slider-line
                 display: flex
                 content: ''
                 width: gem(2)
                 height: gem(200)
                 z-index: 2
-                height: 100%
-                background: #111
+                height: 75%
+                background: #fff
                 align-items: flex-start
+                opacity: 0.3
+                top: gem(25)
+                position: relative
                 .slider-progress
                     display: flex
                     width: 100%
                     height: 25%
-                    background: #fff
+                    background: linear-gradient(97.56deg, #4739FF 0%, #22F4FF 50.52%, #7B46FF 100%)
                     transition: height 0.3s ease
+            .current
+                background: linear-gradient(93.92deg,#4739ff 0,#22f4ff 48.96%,#7b46ff 100%)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+                top: gem(25)
+            // .total
+            //     background: linear-gradient(93.92deg,#4739ff 0,#22f4ff 48.96%,#7b46ff 100%)
+            //     -webkit-background-clip: text
+            //     -webkit-text-fill-color: transparent
+
+
     .highlights_bg
         display: flex
         position: absolute
