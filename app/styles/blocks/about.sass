@@ -215,11 +215,11 @@
         .about_hand_left
             top: gem(-50)
             left: gem(-55)
-            // animation: top_bot_tablet 6s infinite
+            animation: top_bot_tablet 6s infinite
         .about_hand_right
             top: gem(150)
             right: gem(-60)
-            // animation: bot_top_tablet 6s infinite
+            animation: bot_top_tablet 6s infinite
 @keyframes top_bot_tablet
     0%
         top: gem(-50)
@@ -237,6 +237,8 @@
 
 @media only screen and (max-width : 480px)
     .about  
+        overflow-x: hidden
+        margin-top: gem(50)
         &-content
             margin-top: gem(100)
             h2
@@ -250,12 +252,13 @@
                         input
                             width: gem(365)
                         .input_768
-                            display: none
-                        .input_def
                             display: flex
                             width: gem(365)
+                        .input_def
+                            display: none
+                            width: gem(365)
                         .input_active
-                            display: flex
+                            display: none
                             width: gem(365)
                     .form_but
                         width: gem(400)
