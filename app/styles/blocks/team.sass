@@ -129,7 +129,14 @@
             p
                 margin-bottom: gem(0)
         &-card
-            width: gem(740)
+            width: gem(840)
+            flex-wrap: wrap
+            &-value
+                margin-left: gem(45)
+                &:nth-child(3)
+                    position: relative
+                    top: gem(35)
+                    left: gem(165)
         .head_light
             top: gem(-450)
             right: gem(-50)
@@ -140,7 +147,7 @@
             top: gem(-450)
 @media only screen and (max-width : 480px)
     .team
-        margin-top: gem(-200)
+        margin-top: gem(-400)
         &-content
             top: gem(-200)
             p 
@@ -153,6 +160,10 @@
             margin-left: gem(30)
             &-value
                 margin-bottom: gem(20)
+                margin-left: gem(0)
+                &:nth-child(3)
+                    top: 0
+                    left: 0
             // width: gem(1200)
         .bg_head
             top: gem(-350)

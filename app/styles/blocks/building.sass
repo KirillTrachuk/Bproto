@@ -33,20 +33,13 @@
                 top: gem(140)
         &-right
             z-index: 5
-            overflow: scroll
-            height: gem(200)
-            &::-webkit-scrollbar 
-                width: 0
             &-content
                 width: gem(502)
-                // height: gem(200)
-                // .slick-list
-                //     height: gem(300) !important
-                &::-webkit-scrollbar 
-                    width: 0
+                margin-left: gem(80)
                 &-highlights
                     h3
                         margin-bottom: gem(16)
+                        padding-top: gem(30)
                     p
                         width: gem(502)
                         margin-bottom: gem(37)
@@ -54,6 +47,7 @@
                         margin-bottom: gem(73)
                         display: flex
                         flex-direction: row
+                        width: gem(155)
                         img
                             width: gem(32)
                             display: flex
@@ -61,16 +55,46 @@
                             top: gem(-10)
                             right: gem(-10)
                         h4
-                            font-family: var(--button-font)
-            .counter
-                display: flex
-                position: absolute
-                top: 2.5rem
-                right: 0
-                .counter_desctop
-                    width: gem(103)
-                .counter_tablet
-                    display: none
+                            font-family: var(--button-font) 
+        // &-right
+        //     z-index: 5
+        //     overflow: scroll
+        //     height: gem(250)
+        //     &::-webkit-scrollbar 
+        //         width: 0
+        //     &-content
+        //         width: gem(502)
+        //         &::-webkit-scrollbar 
+        //             width: 0
+        //         &-highlights
+        //             h3
+        //                 margin-bottom: gem(16)
+        //                 padding-top: gem(30)
+        //             p
+        //                 width: gem(502)
+        //                 margin-bottom: gem(37)
+        //             a   
+        //                 margin-bottom: gem(73)
+        //                 display: flex
+        //                 flex-direction: row
+        //                 width: gem(155)
+        //                 img
+        //                     width: gem(32)
+        //                     display: flex
+        //                     position: relative
+        //                     top: gem(-10)
+        //                     right: gem(-10)
+        //                 h4
+        //                     font-family: var(--button-font)    
+        .counter
+            display: flex
+            position: absolute
+            top: 2.5rem
+            right: gem(-30)
+            .counter_desctop
+                width: gem(103)
+            .counter_tablet
+                display: none
     .highlights_bg
         display: flex
         position: absolute
@@ -96,14 +120,15 @@
             &-right
                 &-content
                     display: flex
-                .counter
+                    flex-direction: column
+            .counter
+                display: none
+                .counter_desctop
+                    display: none
+                .counter_tablet
                     display: flex
-                    .counter_desctop
-                        display: none
-                    .counter_tablet
-                        display: flex
-                        position: relative
-                        top: gem(200)
+                    position: relative
+                    top: gem(200)
             &-left
                 display: flex
                 position: relative
@@ -130,25 +155,31 @@
                     top: gem(107)
                     height: gem(500)
             &-right
-                position: absolute
-                top: gem(-67)
-                // overflow: hidden
-                .counter
-                    display: none
-                    .counter_tablet
-                        display: none
                 &-content
-                    width: gem(360)
-                    overflow: hidden
-                    height: gem(200)
-                    // height: inherit
-                    flex-direction: column
+                    position: relative
+                    top: gem(-300)
+                    left: gem(-79)
                     &-highlights
                         p
                             width: gem(366)
-                            margin-bottom: gem(25)
-                        a   
-                            margin-bottom: gem(50)
+                        a 
+                            margin-bottom: gem(0)
+
+            //         width: gem(360)
+            //         overflow-x: hidden
+            //         height: gem(300)
+            //         // height: inherit
+            //         flex-direction: column
+            //         &-highlights
+            //             p
+            //                 width: gem(366)
+            //                 margin-bottom: gem(25)
+            //             a   
+            //                 margin-bottom: gem(50)
+            .counter
+                display: none
+                .counter_tablet
+                    display: none
         .highlights_bg
             right: gem(-39)
             img

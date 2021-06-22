@@ -4,8 +4,7 @@ import $ from 'jquery'
 window.jQuery = $
 window.$ = $
 import 'slick-carousel'
-// // Import vendor jQuery plugin example (not module)
-// require('~/app/libs/mmenu/dist/mmenu.js')
+import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 		let per = windowScroll / windowHeight * 100;
 		progress.style.width = per + '%'
-		console.log(windowHeight)
+		// console.log(windowHeight)
 	}
 
 	gsap.to(".preloader", 3.2, {
@@ -39,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 	infinite: false,
 	// 	verticalSwiping: true,
 	// 	adaptiveHeight: true,
+		
 	// });
 
 	let mobileButton = document.querySelector('.bt-menu')
@@ -49,4 +49,41 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileButton.classList.toggle('active')
  })
 
+	let checkSlide = document.querySelector('.slide_check')
+	let slideTop
+	let slideBottom
+	function slideSroll() {
+		slideTop = checkSlide.getBoundingClientRect().y
+		slideBottom = checkSlide.getBoundingClientRect().y + checkSlide.getBoundingClientRect().height - window.innerHeight
+		// console.log(slideTop,slideBottom)
+	}
+	window.addEventListener('scroll', () => {
+		slideSroll()
+	})
+	console.log(checkSlide)
 })
+// const swiper = new Swiper('.swiper-container', {
+// 	// Optional parameters
+// 	direction: 'vertical',
+// 	// // loop: true,
+// 	// mousewheel: true,
+// 	// slidesPerView: 1,
+// 	// simulateTouch: false,
+  
+// 	// If we need pagination
+// 	pagination: {
+// 	  el: '.swiper-pagination',
+// 	  type: 'progressbar',
+// 	},
+// 	// scrollbar: {
+// 	// 	el: '.swiper-scrollbar',
+// 	// 	draggable: true,
+// 	//   },
+// });
+
+// swiper.on('transitionEnd', () =>{
+// 	console.log('Индекс', + swiper.realIndex);
+// 	index = swiper.realIndex + 1;
+// 	document.getElementById('fraction').innerHTML = index;
+  
+//    });

@@ -198,11 +198,28 @@
                                 width: gem(468)
                             .input_768
                                 display: flex
-                                position: absolute
+                                width: gem(360)
+                                opacity: 1
+                                height: gem(50)
+                                transition: opacity .3s ease
                             .input_def
                                 display: none
+                                width: gem(365)
                             .input_active
                                 display: none
+                                width: gem(365)
+                            .input_768_active
+                                display: flex
+                                position: absolute
+                                width: gem(360)
+                                opacity: 0
+                                height: gem(50)
+                                transition: opacity .3s ease
+                            &:hover
+                                .input_768
+                                    opacity: 0
+                                .input_768_active
+                                    opacity: 1
                         .form_but
                             position: relative
                             top: gem(-5)

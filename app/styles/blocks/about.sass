@@ -64,6 +64,8 @@
                     .input_768
                         display: none
                         position: absolute
+                    .input_768_active
+                        display: none
                     &:hover
                         .input_def
                             opacity: 0
@@ -253,13 +255,28 @@
                             width: gem(365)
                         .input_768
                             display: flex
-                            width: gem(365)
+                            width: gem(360)
+                            opacity: 1
+                            height: gem(50)
+                            transition: opacity .3s ease
                         .input_def
                             display: none
                             width: gem(365)
                         .input_active
                             display: none
                             width: gem(365)
+                        .input_768_active
+                            display: flex
+                            position: absolute
+                            width: gem(360)
+                            opacity: 0
+                            height: gem(50)
+                            transition: opacity .3s ease
+                        &:hover
+                            .input_768
+                                opacity: 0
+                            .input_768_active
+                                opacity: 1
                     .form_but
                         width: gem(400)
                         left: gem(-5)
@@ -281,7 +298,7 @@
                     margin-left: gem(23)
                     a 
                         display: flex
-                        margin-bottom: gem(15)
+                        margin-bottom: gem(20)
                         img
                             width: gem(100)
                     .articals

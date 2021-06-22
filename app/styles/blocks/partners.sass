@@ -97,18 +97,42 @@
     .partners
         top: gem(300)
         &-contant
-            width: gem(1200)
-            margin-left: gem(32)
-            // overflow-y: auto
-            overflow-x: hidden
-            // transform: rotate(-90deg) translateY(-80px)
-            // transform-origin: right top
+            width: gem(500)
+            margin-left: gem(230)
+            &-item 
+                width: gem(175)
+                &:nth-child(2)
+                    border-radius: 0 40px 0 0
+                &:nth-child(5)
+                    border-radius: 0
+                &:nth-child(6)
+                    border-radius: 0
+                &:nth-child(9)
+                    border-radius: 0 0 0 40px
+            &-line_x
+                top: gem(-720)
+                left: gem(45)
+                &:nth-child(12)
+                    top: gem(-541)
+                    left: (gem(45))
+                &:nth-child(13)
+                    top: gem(-361)
+                    left: (gem(45))
+                &:nth-child(14)
+                    top: gem(-181)
+                    left: gem(45)
             &-line_y
-                left: gem(271)
+                top: gem(418)
+                left: gem(406)
                 &:nth-child(16)
-                    left: gem(511)
+                    left: gem(407)
+                    top: gem(606)
                 &:nth-child(17)
-                    left: gem(751)
+                    left: gem(407)
+                    top: gem(780)
+                &:nth-child(18)
+                    left: gem(407)
+                    top: gem(960)
         &-bg
             top: gem(50)
             img
@@ -123,6 +147,7 @@
         overflow-x: hidden
         &-contant
             width: gem(400)
+            margin-left: gem(30)
             &-item 
                 width: gem(175)
                 &:nth-child(2)

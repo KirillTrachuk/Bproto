@@ -166,7 +166,30 @@ button[type='submit']
             background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
     &.active
         left: 0
+@media only screen and (max-width : 1024px)
+    .mobile_menu
+        .second_post
+            left: gem(280)
+@media only screen and (max-width : 480px)
+    .mobile_menu
+        .second_post
+            left: gem(100)
              
+
+
+.submitting
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    align-content: center
+    position: relative
+    top: gem(400)
+    width: gem(367)
+    h2
+        width: gem(367)
+// .swiper-container .swiper-pagination-progressbar-fill 
+//     background-color: #fff
 // .swiper-container 
 //     width: 600px
 //     height: 300px
