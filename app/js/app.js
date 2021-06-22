@@ -4,7 +4,7 @@ import $ from 'jquery'
 window.jQuery = $
 window.$ = $
 import 'slick-carousel'
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -28,39 +28,55 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 
-	// $('.slider-for').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	arrows: false,
-	// 	fade: false,
-	// 	draggable: true,
-	// 	vertical: true,
-	// 	infinite: false,
-	// 	verticalSwiping: true,
-	// 	adaptiveHeight: true,
-		
-	// });
+	// slider
+	let slider = $('.slider-for')
+	let currentSlideNumber = document.querySelector('.current')
+	let totalSlides = document.querySelector('.total')
+	let sliderProgress = document.querySelector('.slider-progress')
+	let curenNumber
+	let progressHeight
+	if (window.innerWidth > 480) {
+		slider.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: false,
+			draggable: true,
+			vertical: true,
+			infinite: false,
+			verticalSwiping: true,
+			adaptiveHeight: true,
+		});
 
+		slider.on('wheel', (function (e) {
+			e.preventDefault();
+			if (e.originalEvent.deltaY < 0) {
+				$(this).slick('slickNext');
+			} else {
+				$(this).slick('slickPrev');
+			}
+		}));
+	
+		slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			curenNumber = nextSlide + 1
+			progressHeight = (100 / slick.slideCount) * curenNumber
+			sliderProgress.style.height = `${progressHeight}%`
+			currentSlideNumber.innerHTML = `0${curenNumber}`
+			totalSlides.innerHTML = `0${slick.slideCount}`
+		});
+	}
+	
+
+	
+
+	//mobile menu
 	let mobileButton = document.querySelector('.bt-menu')
 	let mobileMenu = document.querySelector('.mobile_menu')
 
 	mobileButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active')
-    mobileButton.classList.toggle('active')
- })
-
-	let checkSlide = document.querySelector('.slide_check')
-	let slideTop
-	let slideBottom
-	function slideSroll() {
-		slideTop = checkSlide.getBoundingClientRect().y
-		slideBottom = checkSlide.getBoundingClientRect().y + checkSlide.getBoundingClientRect().height - window.innerHeight
-		// console.log(slideTop,slideBottom)
-	}
-	window.addEventListener('scroll', () => {
-		slideSroll()
+		mobileMenu.classList.toggle('active')
+		mobileButton.classList.toggle('active')
 	})
-	console.log(checkSlide)
 })
 // const swiper = new Swiper('.swiper-container', {
 // 	// Optional parameters
@@ -69,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 	// mousewheel: true,
 // 	// slidesPerView: 1,
 // 	// simulateTouch: false,
-  
+
 // 	// If we need pagination
 // 	pagination: {
 // 	  el: '.swiper-pagination',
@@ -85,5 +101,5 @@ document.addEventListener('DOMContentLoaded', () => {
 // 	console.log('Индекс', + swiper.realIndex);
 // 	index = swiper.realIndex + 1;
 // 	document.getElementById('fraction').innerHTML = index;
-  
+
 //    });
