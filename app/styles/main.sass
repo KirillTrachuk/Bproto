@@ -185,18 +185,85 @@ button[type='submit']
     align-content: center
     position: relative
     top: gem(400)
-    width: gem(367)
     h2
         width: gem(367)
-// .swiper-container .swiper-pagination-progressbar-fill 
-//     background-color: #fff
-// .swiper-container 
-//     width: 600px
-//     height: 300px
-//     z-index: 5
+    .submit
+        display: flex
+        position: relative
+        top: 0
+        right: 0
+        width: gem(214)
+        cursor: pointer
+        z-index: 10
+        color: #000
+        transition: all .25s ease
+        &::after
+            display: flex
+            position: absolute
+            content: ''
+            width: gem(212)
+            height: gem(54)
+            border-radius: 0 gem(8) gem(8) gem(8)
+            background: linear-gradient(93.92deg, #22F4FF 0%, #F0598D 48.96%, #FFC93C 100%)
+@media only screen and (max-width : 480px)
+    .submitting
+        h2
+            margin-left: gem(140)
 
-// .black_gradient
-//     display: flex
-//     position: absolute
-//     top: 11rem
-//     z-index: 2
+
+#box 
+    margin: auto
+    overflow: hidden
+    transition: all .5s ease
+#box2 
+    margin: auto
+    overflow: hidden
+#box3
+    margin: auto
+    overflow: hidden
+#box4
+    margin: auto
+    overflow: hidden
+
+.slider 
+    transition: all .5s ease
+    height: 0
+.slider2
+    transition: all .5s ease
+    height: 0
+.slider3
+    transition: all .5s ease
+    height: 0
+.slider4
+    transition: all .5s ease
+    height: 0
+
+.slider.open1
+    height: gem(210)
+    // width: gem(480)
+    // display: flex
+    // position: relative
+    // top: gem(-60)
+    // left: gem(-9)
+    // opacity: 1
+
+.slider2.open2
+    height: gem(110)
+    // width: gem(480)
+    // display: flex
+    // position: relative
+    // top: gem(-60)
+
+.slider3.open3 
+    height: gem(110)
+    // width: gem(480)
+    // display: flex
+    // position: relative
+    // top: gem(-60)
+
+.slider4.open4
+    height: gem(110)
+    // width: gem(480)
+    // display: flex
+    // position: relative
+    // top: gem(-60)

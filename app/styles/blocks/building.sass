@@ -153,8 +153,6 @@
             //     background: linear-gradient(93.92deg,#4739ff 0,#22f4ff 48.96%,#7b46ff 100%)
             //     -webkit-background-clip: text
             //     -webkit-text-fill-color: transparent
-
-
     .highlights_bg
         display: flex
         position: absolute
@@ -182,7 +180,22 @@
                     display: flex
                     flex-direction: column
             .counter
-                display: none
+                display: flex
+                width: gem(700)
+                height: gem(100)
+                right: 0
+                .current
+                    top: gem(290)
+                    left: gem(-300)
+                .total
+                    top: gem(265)
+                    left: gem(300)
+                .slider-line
+                    height: gem(2)
+                    width: 75%
+                    height: gem(2)
+                    top: gem(300)
+                    position: absolute 
                 .counter_desctop
                     display: none
                 .counter_tablet
@@ -215,6 +228,8 @@
                     top: gem(107)
                     height: gem(500)
             &-right
+                overflow: visible
+                height: gem(960)
                 &-content
                     position: relative
                     top: gem(-300)
@@ -222,20 +237,13 @@
                     &-highlights
                         p
                             width: gem(366)
+                            background: none
+                            -webkit-background-clip: inherit
+                            -webkit-text-fill-color: white
+                            background-position: none
                         a 
                             margin-bottom: gem(0)
-
-            //         width: gem(360)
-            //         overflow-x: hidden
-            //         height: gem(300)
-            //         // height: inherit
-            //         flex-direction: column
-            //         &-highlights
-            //             p
-            //                 width: gem(366)
-            //                 margin-bottom: gem(25)
-            //             a   
-            //                 margin-bottom: gem(50)
+                            opacity: 1
             .counter
                 display: none
                 .counter_tablet

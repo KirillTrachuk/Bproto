@@ -46,6 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
 			infinite: false,
 			verticalSwiping: true,
 			adaptiveHeight: true,
+			speed: 2000,
+			responsive: [
+				{
+				  breakpoint: 1024,
+				  settings: {
+					vertical: false,
+				  }
+				},
+				{
+					breakpoint: 480,
+					settings: "unslick",
+				  },
+			  ]
 		});
 
 		slider.on('wheel', (function (e) {
@@ -77,7 +90,37 @@ document.addEventListener('DOMContentLoaded', () => {
 		mobileMenu.classList.toggle('active')
 		mobileButton.classList.toggle('active')
 	})
+
+	//open more
+	let box1 = document.getElementById('box')
+	let box2 = document.getElementById('box2')
+	let box3 = document.getElementById('box3')
+	let box4 = document.getElementById('box4')
+
+	let butopen = document.getElementById('butopen1')
+	let butopen2 = document.getElementById('butopen2')
+	let butopen3 = document.getElementById('butopen3')
+	let butopen4 = document.getElementById('butopen4')
+
+	butopen.onclick = function() {
+		box1.classList.toggle("open1")
+	}
+
+	butopen2.onclick = function() {
+		box2.classList.toggle("open2")
+	}
+
+	butopen3.onclick = function() {
+		box3.classList.toggle("open3")
+	}
+
+	butopen4.onclick = function() {
+		box4.classList.toggle("open4")
+	}
 })
+
+
+
 // const swiper = new Swiper('.swiper-container', {
 // 	// Optional parameters
 // 	direction: 'vertical',

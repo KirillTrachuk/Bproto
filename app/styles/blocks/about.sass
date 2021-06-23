@@ -145,7 +145,7 @@
         position: absolute
         top: gem(150)
         left: 0
-        // animation: top_bot 6s infinite
+        animation: top_bot 6s infinite
         img
             width: gem(440)
     .about_hand_right
@@ -153,7 +153,7 @@
         position: absolute
         top: gem(500)
         right: 0
-        // animation: bot_top 6s infinite
+        animation: bot_top 6s infinite
         img
             width: gem(413)
 @keyframes top_bot
@@ -172,7 +172,7 @@
          top: gem(500)
 @media only screen and (max-width : 1024px)
     .about  
-        margin-top: gem(200)
+        margin-top: gem(0)
         &-content
             margin-top: gem(350)
             align-items: flex-start
@@ -240,7 +240,7 @@
 @media only screen and (max-width : 480px)
     .about  
         overflow-x: hidden
-        margin-top: gem(50)
+        margin-top: gem(-150)
         &-content
             margin-top: gem(100)
             h2
